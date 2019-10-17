@@ -37,6 +37,11 @@
     ons.notification.alert('Incorrect');
   }
 }
+    function quiz()
+{
+   var navigator = document.getElementById('navigator');
+    navigator.resetToPage('quiz.html');
+}
     </script>
 
 
@@ -66,9 +71,15 @@
  </p>
 
  </div>
+
 </ons-page>
 
-	<br />
+	
+<ons-toolbar id="home-toolbar">
+<div class="left">Home</div>
+<div class="center" onClick = 'quiz()'>Quiz</div> 
+</ons-toolbar>
+<br />
 
 <ons-template id="shackleton.html">>
   <ons-page id='shackleton'>
@@ -93,14 +104,20 @@
 </div>
 
 <div class="clearme"></div>
-<div id="quiz">
-<h3> Quiz </h3>
-<p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
-<p> <button onClick='chk_ans()'> Check Answer</button></p>
-</div>
 <div id="footer">
 Thank you for visiting my page
 </div>
+</div>
+</ons-page>
+</ons-template>
+
+ <ons-template id='quiz.html'>
+    <ons-page id='quiz'>
+   <div id="quiz">
+     </br>
+<h3> Quiz </h3>
+<p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
+<p> <button onClick='chk_ans()'> Check Answer</button></p>
 </div>
 </ons-page>
 </ons-template>
