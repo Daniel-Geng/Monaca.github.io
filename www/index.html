@@ -42,6 +42,11 @@
    var navigator = document.getElementById('navigator');
     navigator.resetToPage('quiz.html');
 }
+      function shackleton()
+{
+   var navigator = document.getElementById('navigator');
+    navigator.resetToPage('shackleton.html');
+}
     </script>
 
 
@@ -83,6 +88,9 @@
 <div class="left">Home</div>
 <div class="center" onClick = 'quiz()'>Quiz</div> 
 </ons-toolbar>
+
+
+
 <br />
     <div id="wrapper">
 <div id="header">
@@ -115,6 +123,13 @@ Thank you for visiting my page
  <ons-template id='quiz.html'>
     <ons-page id='quiz'>
    <div id="quiz">
+         <ons-toolbar id="home-toolbar">
+<div class="left" onCLick = 'shackleton()'>Back</div>
+<div class="center" onClick = 'quiz()'>Quiz</div> 
+</ons-toolbar>
+
+
+
      </br>
 <h3> Quiz </h3>
 <p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
