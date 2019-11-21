@@ -42,11 +42,7 @@
    var navigator = document.getElementById('navigator');
     navigator.resetToPage('quiz.html');
 }
-      function shackleton()
-{
-   var navigator = document.getElementById('navigator');
-    navigator.resetToPage('shackleton.html');
-}
+
     </script>
 
 
@@ -57,33 +53,34 @@
 <body>
 
 <ons-navigator id= 'navigator'>
-   <ons-page>
+
+     <ons-page>
  <div style="text-align: center; margin-top: 200px">
  <p>
- <ons-input id="username" placeholder="username" modifier="underbar">
+ <ons-input id='username' placeholder='Username' modifier='underbar'>
  </ons-input>
  </p>
  <p>
  <ons-input
- id="password"
- placeholder="password"
- type="password"
- modifier="underbar">
+ id='password'
+ placeholder='Password'
+ type='password'
+ modifier='underbar'>
  </ons-input>
  </p>
  <p>
- <ons-button onClick='login()'>Sign in</ons-button>
+ <ons-button onClick = 'login()' >Sign in</ons-button>
  </p>
-
  </div>
-
 </ons-page>
 
-	
+</ons-navigator>
 
 
-<ons-template id="shackleton.html">>
-  <ons-page id='shackleton'>
+
+
+<ons-template id= 'shackleton.html'>
+ <ons-page id='shackleton'>
     <ons-toolbar id="home-toolbar">
 <div class="left">Home</div>
 <div class="center" onClick = 'quiz()'>Quiz</div> 
@@ -91,8 +88,9 @@
 
 
 
-<br />
-    <div id="wrapper">
+
+
+ <div id="wrapper">
 <div id="header">
 <h2> Ernest Shackleton (1874 - 1922) </h2>
 <img src="images/shackletonicon.jpg" alt="Ernest Shackleton at Dulwich College"/>
@@ -120,16 +118,22 @@ Thank you for visiting my page
 </ons-page>
 </ons-template>
 
- <ons-template id='quiz.html'>
+
+	
+
+<ons-template id='quiz.html'>
     <ons-page id='quiz'>
-   <div id="quiz">
+   <div id='quiz'>
+     
          <ons-toolbar id="home-toolbar">
-<div class="left" onCLick = 'shackleton()'>Back</div>
-<div class="center" onClick = 'quiz()'>Quiz</div> 
+<div class="left" onClick= "var navigator = document.getElementById('navigator'); navigator.popPage();">Back</div>
 </ons-toolbar>
 
 
+ 
 
+
+    </br>
      </br>
 <h3> Quiz </h3>
 <p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
