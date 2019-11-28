@@ -1,6 +1,6 @@
-<!DOCTYPE HTML>
+
 <html>
-<head>
+  <head>
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
 <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
 <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
@@ -11,50 +11,38 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
 
+</head> 
 
 
-    <script>
-      function chk_ans()
-{
-  my_elem = document.getElementById('ans');
-  my_elem.innerHTML = '800 nautical miles';
-  my_elem.style.color = 'red';
-}
-    function login()
+<body>
+  
+    <ons-navigator id= 'navigator'>
+    <ons-page id= "login.html">
+
+   <script>
+ function login()
 {
   username = document.getElementById('username').value;
   pass = document.getElementById('password').value;
-  c = "user";
-  d = "pass";
+  c = 'user';
+  d = 'pass';
   if (username ===c && pass===d)
   {
 
     var navigator = document.getElementById('navigator');
-    navigator.resetToPage('shackleton.html');
+    navigator.pushPage('shac.html');
   }
   else
   {
     ons.notification.alert('Incorrect');
   }
-}
-    function quiz()
-{
-   var navigator = document.getElementById('navigator');
-    navigator.resetToPage('quiz.html');
-}
-
     </script>
 
 
 
 
+      
 
-</head>
-<body>
-
-<ons-navigator id= 'navigator'>
-
-     <ons-page>
  <div style="text-align: center; margin-top: 200px">
  <p>
  <ons-input id='username' placeholder='Username' modifier='underbar'>
@@ -73,73 +61,6 @@
  </p>
  </div>
 </ons-page>
-
 </ons-navigator>
-
-
-
-
-<ons-template id= 'shackleton.html'>
- <ons-page id='shackleton'>
-    <ons-toolbar id="home-toolbar">
-<div class="left">Home</div>
-<div class="center" onClick = 'quiz()'>Quiz</div> 
-</ons-toolbar>
-
-
-
-
-
- <div id="wrapper">
-<div id="header">
-<h2> Ernest Shackleton (1874 - 1922) </h2>
-<img src="images/shackletonicon.jpg" alt="Ernest Shackleton at Dulwich College"/>
-</div>
-<div id="nav">
-  <h3> Shackleton's Life </h3>
-<ul>
-<li> Shackleton's Life </li>
-<li> Dulwich College </li>
-<li> Endurance Expedition </li>
-<li> James Caird </li>
-</ul>
-</div>
-<div id="container">
-<p class="snippet"> <a href="https://tr.wikipedia.org/wiki/Ernest_Shackleton" target="_blank">  Sir Ernest Shackleton </a> was an Anglo-Irish Antarctic explorer and is famous, principally, for leading the Imperial Trans-Antartic (Endurance) Expedition of 1914-16. </p>
-<p class="snippet"> He was one of the principal figures of the period known as the Heroic Age of Antartic Exploration. Educated at Dulwich College and having ignored his father's wishes that he become a doctor he joined the merchant navy. Of many quotes one of his most famous is,<span class="myquote">"Difficulties are just things to overcome, after all."</span> </p>
-<p class="snippet"> During his life he made three trips to the Antarctic. As well as climbing Mount Erebus he made many important scientific discoveries. On his fourth expedition to circumnavigate the Antartic he died of a heart attack. He was buried on the Island of South Georgia.</p>
-</div>
-
-<div class="clearme"></div>
-<div id="footer">
-Thank you for visiting my page
-</div>
-</div>
-</ons-page>
-</ons-template>
-
-
-	
-
-<ons-template id='quiz.html'>
-    <ons-page id='quiz'>
-   <div id='quiz'>
-     
-         <ons-toolbar id="home-toolbar">
-<div class="left" onClick= "var navigator = document.getElementById('navigator'); navigator.popPage();">Back</div>
-</ons-toolbar>
-
-
- 
-
-
-    </br>
-     </br>
-<h3> Quiz </h3>
-<p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
-<p> <button onClick='chk_ans()'> Check Answer</button></p>
-</div>
-</ons-page>
-</ons-template>
 </body>
 </html>
